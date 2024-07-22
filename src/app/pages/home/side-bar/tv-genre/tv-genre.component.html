@@ -1,0 +1,15 @@
+<div class="tv-genre">
+    <div class="container">
+        <div class="Tvgenre d-flex justify-content-between">
+            <h2>Tv Genre</h2>
+            <i class="{{iconClass}}" (click)="toggleGenre()"></i>
+        </div>
+        <div class="list-tvGen" *ngIf="showTvGenre">
+            <ul>
+                <li *ngFor="let tvGen of tvGenres">
+                    {{tvGen.name}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

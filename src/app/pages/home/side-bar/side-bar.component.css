@@ -1,0 +1,5 @@
+.side-bar{
+    background-color: var(--primary-color-9);
+    width: 400px;
+    height: 100vh;
+}

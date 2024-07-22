@@ -1,0 +1,13 @@
+<div class="genre-page">
+    <div class="container">
+       <div class="genre d-flex justify-content-between">
+        <h2>Movies Genre</h2>
+        <i class="{{iconClass}}" (click)="toggleGenres()"></i>
+    </div> 
+        <div class="list-genres" *ngIf="showGenres">
+            <ul>
+                <li *ngFor="let genre of genres">{{genre.name}}</li>
+            </ul>
+        </div>
+    </div>
+</div>

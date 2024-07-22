@@ -1,0 +1,44 @@
+.genre-page{
+    width: 400px;
+}
+.container{
+    padding: 15px;
+}
+.container h2{
+    font-size: 25px;
+    font-family: Poppins,sans-serif;
+    font-style: italic;
+    font-weight: 600;
+    color: var(--secondary-color-2);
+}
+.genre i{
+    font-size: 20px;
+    margin-top: 10px;
+    color: white;
+}
+.genre i:hover{
+    cursor: pointer;
+}
+.list-genres{
+    font-size: 20px;
+    font-family: Poppins,sans-serif;
+    font-weight: 400;
+    color: gray;
+    font-style: italic;
+}
+.list-genres ul{
+    list-style: none;
+    padding: 0;
+}
+.list-genres ul li {
+    padding: 8px 12px;
+    border-bottom: 1px solid #eee;
+  }
+  .list-genres ul li:last-child {
+    border-bottom: none; 
+  }
+.list-genres ul li:hover{
+    background-color:var(--secondary-color-2);
+    cursor: pointer;
+    color: black;
+}
