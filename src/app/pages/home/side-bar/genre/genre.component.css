@@ -1,11 +1,11 @@
 .genre-page{
-    width: 400px;
+    width: 300px;
 }
 .container{
     padding: 15px;
 }
 .container h2{
-    font-size: 25px;
+    font-size: 20px;
     font-family: Poppins,sans-serif;
     font-style: italic;
     font-weight: 600;
@@ -20,7 +20,7 @@
     cursor: pointer;
 }
 .list-genres{
-    font-size: 20px;
+    font-size: 15px;
     font-family: Poppins,sans-serif;
     font-weight: 400;
     color: gray;
