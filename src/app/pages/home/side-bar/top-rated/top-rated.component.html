@@ -1,0 +1,15 @@
+<div class="top-rated">
+    <div class="container">
+        <div class="heading d-flex justify-content-between">
+            <h2>Top Rated</h2>
+            <i class="{{iconClass}}" (click)="toggleTopRate()"></i>
+        </div>
+        <div class="list-TopRated" *ngIf="showTopRated">
+            <ul>
+                <li *ngFor="let topRate of topRated">
+                    {{topRate.title}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

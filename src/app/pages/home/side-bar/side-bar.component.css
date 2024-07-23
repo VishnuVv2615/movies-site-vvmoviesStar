@@ -2,7 +2,7 @@
     background-color: var(--primary-color-9);
     width: 350px;
     display: block;
-    height: 100vh;
+    height: 1000vh;
     box-sizing: border-box;
     overflow-y: auto;
 }

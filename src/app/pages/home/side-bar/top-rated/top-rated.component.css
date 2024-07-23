@@ -1,0 +1,42 @@
+.top-rated{
+    width: 300px;
+}
+.container
+{
+    padding: 15px;
+}.heading h2{
+    font-size: 20px;
+    font-family: poppins,sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    color: var(--secondary-color-2);
+}
+.heading i{
+    font-size: 20px;
+    margin-top: 10px;
+    color: white;
+}
+.heading i:hover{
+    cursor: pointer;
+}
+.list-TopRated{
+    font-size: 15px;
+    font-family: poppins,sans-serif;
+    color: gray;    
+    font-style: italic;
+}
+.list-TopRated ul{
+    list-style: none;
+    padding: 0;
+}
+.list-TopRated ul li{
+    padding: 8px 12px;
+    border-bottom: 1px solid #eee;
+}
+.list-TopRated ul li:last-child{
+    border-bottom: none;
+}
+.list-TopRated ul li:hover{
+    background-color: var(--secondary-color-2);
+    color: black;
+}
