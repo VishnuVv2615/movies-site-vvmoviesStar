@@ -12,20 +12,37 @@ import { CommonModule } from '@angular/common';
 })
 export class PopularMoviesComponent implements OnInit {
 
-  popularMovies:any[]=[];
-  constructor(private popularMovie:PopularGenreService){}
+  popularMovies: any[] = [];
+  displayedMovies: any[] = [];
+  itemsToShow: number = 8;
+  showMoreButton: boolean = true;
+  showAll: boolean = false;
+
+  constructor(private popularMovie: PopularGenreService) { }
 
   ngOnInit(): void {
     this.getPopularMovies();
   }
 
-  getPopularMovies(){
+  getPopularMovies() {
     this.popularMovie.getPopularGenre().
-    subscribe((data)=>{
-      this.popularMovies=data;
-    }),
-    (error:HttpErrorResponse)=>{
-      console.error("Api Fetching Error",error);
-    }
+      subscribe((data) => {
+        this.popularMovies = data;
+        this.displayedMovies = this.popularMovies.slice(0, this.itemsToShow);
+        this.showMoreButton = this.popularMovies.length > this.itemsToShow;
+      }),
+      (error: HttpErrorResponse) => {
+        console.error("Api Fetching Error", error);
+      }
+  }
+
+  updatedMovies() {
+    this.displayedMovies = this.showAll ? this.popularMovies : this.popularMovies.slice(0, this.itemsToShow);
+  }
+
+  toggleShowMore() {
+    this.showAll = !this.showAll;
+    this.updatedMovies();
+    this.showMoreButton = !this.showAll || (this.showAll && this.popularMovies.length > this.itemsToShow)
   }
 }

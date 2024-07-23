@@ -4,12 +4,18 @@
             <h2>Popular Movies</h2>
         </div>
         <div class="row">
-            <div class="col-md-4 col-lg-3" *ngFor="let popular of popularMovies">
+            <div class="col-md-4 col-lg-3" *ngFor="let popular of displayedMovies">
                 <div class="movie-item">
-                    <img [src]="'https://image.tmdb.org/t/p/w500' + popular.poster_path" class="img-fluid" alt="{{popular.title}}">
+                    <img [src]="'https://image.tmdb.org/t/p/w500' + popular.poster_path" class="img-fluid"
+                        alt="{{popular.title}}">
                     <h3>{{popular.title}}</h3>
                 </div>
             </div>
+        </div>
+        <div class="text-center mt-3" *ngIf="showMoreButton">
+            <button class="btn btn-primary" (click)="toggleShowMore()">
+                {{showAll ? 'Show Less' : 'Show More'}}
+            </button>
         </div>
     </div>
 </div>
