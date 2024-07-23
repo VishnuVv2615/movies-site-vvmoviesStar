@@ -1,5 +1,14 @@
-.side-bar{
+.side-bar {
     background-color: var(--primary-color-9);
-    width: 300px;
+    width: 350px;
+    display: block;
     height: 100vh;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+@media(max-width:430px) {
+    .side-bar {
+        display: none;
+    }
 }

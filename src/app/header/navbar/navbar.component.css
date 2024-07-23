@@ -44,8 +44,9 @@
     background-color: var(--secondary-color-2);
     border: none;
     border-radius: 20px;
+    margin-left: 5px;
 }
-.login-menu .loigin .menu{
+.login-menu .login .menu{
     font-size: 20px;
 }
 .login-menu button:hover{
@@ -54,4 +55,53 @@
 }
 .login-menu .menu{
     display: none;
+}
+.search-btn{
+    display: none;
+}
+
+@media (max-width:780px){
+    .container{
+        padding: 15px;
+        position: relative;
+    }
+    .logo{
+        font-size: 20px;
+    }
+    .logo h2{
+        font-size: 15px;
+        font-weight: 300;
+        margin-top: 5px;
+    }
+    .search{
+        display: none;
+    }
+    .search-btn{
+        display: block;
+    }
+    .login-menu button{
+        background: none;
+        color: var(--secondary-color-2);
+    }
+    .login-menu button:hover{
+        cursor: pointer;
+        background: none;
+    }
+    .login-menu .menu{
+        display: block;
+    }
+}
+
+@media(max-width:1024px)
+{
+    .search i{
+        position: absolute;
+        left: 76%;
+        top:40px;
+        font-size: 20px;
+        color: var(--secondary-color-2);
+    }
+    .search i:hover{
+        cursor: pointer;
+    }
 }

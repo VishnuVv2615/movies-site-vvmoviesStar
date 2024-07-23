@@ -1,0 +1,16 @@
+<div class="popular-genre">
+    <div class="container">
+        <div class="heading d-flex justify-content-between">
+            <h2>Popular Movies</h2>
+            <i class="{{iconClass}}" (click)="togglePop()"></i>
+        </div>
+        <div class="list-popular" *ngIf="showPopular">
+            <ul>
+                <li *ngFor="let popularGen of popularGenre">
+                    {{popularGen.title}}
+                </li>
+            </ul>
+        </div>
+    </div>
+   
+</div>
