@@ -1,0 +1,66 @@
+.tv-series{
+    width: 300px;
+}
+.container{
+    padding: 15px;
+}
+.heading h2{
+    font-size: 22px;
+    font-family: Poppins,sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    color: var(--secondary-color-2);
+}
+.list-series{
+    padding: 10px;
+}
+.list-series h3{
+font-size: 20px;
+font-family: Poppins,sans-serif;
+font-weight: 500;
+font-style: italic;
+color: var(--secondary-color-2);
+}
+.list-series ul{
+    list-style: none;
+}
+.list-series{
+    font-size: 15px;
+    font-family: poppins,sans-serif;
+    color: gray;
+    font-style: italic;
+}
+.list-series ul li{
+    padding: 8px 12px;
+    border-bottom: 1px solid #eee;
+}
+.list-series ul li:last-child{
+    border-bottom: none;
+}
+.list-series ul li:hover{
+    background-color: var(--secondary-color-2);
+    color: black;
+}
+.list-series i{
+    font-size: 20px;
+    margin-top: 10px;
+    color:gray;
+}
+.list-series i:hover{
+    cursor: pointer;
+}
+.air-on-today{
+    margin-bottom: 10px;
+}
+.on-the-air{
+    margin-bottom: 10px;
+}
+.popular{
+    margin-bottom: 10px;
+}
+.top-rated{
+    margin-bottom: 10px;
+}
+.list-item{
+    padding: 5px;
+}

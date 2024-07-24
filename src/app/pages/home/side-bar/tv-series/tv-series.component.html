@@ -1,0 +1,60 @@
+<div class="tv-series">
+    <div class="container">
+        <div class="heading d-flex justify-content-between">
+            <h2>TV Series List</h2>
+        </div>
+        <div class="list-series">
+            <div class="air-on-today">
+                <div class="heading d-flex justify-content-between">
+                    <h3>Air On Today</h3>
+                    <i class="{{airOnIcon}}" (click)="toggleAirOn()"></i>
+                </div>
+                <div class="list-item" *ngIf="showAirOnToday">
+                    <ul>
+                        <li *ngFor="let air of airOnToday">
+                            {{air.name}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="on-the-air">
+                <div class="heading d-flex justify-content-between">
+                    <h3>On The Air</h3>
+                    <i class="{{onTheAirIcon}}" (click)="toggleOnTheAir()"></i>
+                </div>
+                <div class="list-item" *ngIf="showOnTheAir">
+                    <ul>
+                        <li *ngFor="let onThe of onTheAir">
+                            {{onThe.name}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="popular">
+                <div class="heading d-flex justify-content-between">
+                    <h3>Popular</h3>
+                    <i class="{{popularIcon}}" (click)="togglePopular()"></i>
+                </div>
+                <div class="list-item" *ngIf="showPopular">
+                    <ul>
+                        <li *ngFor="let popular of popularSeries">
+                            {{popular.name}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="top-rated">
+                <div class="heading d-flex justify-content-between">
+                    <h3>Top Rated Series</h3>
+                    <i class="{{topRateIcon}}" (click)="toggleTopRated()"></i>
+                </div>
+                <div class="list-item" *ngIf="showTopRated">
+                    <ul>
+                        <li *ngFor="let top of topRated">
+                            {{top.name}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+</div>
