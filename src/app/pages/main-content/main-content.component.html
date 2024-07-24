@@ -4,11 +4,16 @@
             <span class="sr-only">Loading...</span>
           </div>
     </div>
-    <div *ngIf="!loading">
+    <div *ngIf="!loading" class="movies-list">
+      <h2>Movies</h2>
       <app-banner></app-banner>
       <app-now-playing></app-now-playing>
       <app-popular-movies></app-popular-movies>
       <app-top-rated></app-top-rated>
+    </div>
+    <div *ngIf="!loading" class="Tv-series-list">
+      <h2>Tv Series List</h2>
+      <app-air-ontoday></app-air-ontoday>
     </div>
   </div>
   

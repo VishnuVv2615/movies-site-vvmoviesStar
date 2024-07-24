@@ -7,3 +7,24 @@ height: 100vh;
 padding: 20%;
 color: var(--secondary-color-3);
 }
+.movies-list{
+    padding: 20px;
+    border-bottom: 1px solid gray;
+}
+.movies-list h2{
+    font-size: 35px;
+    font-family: Poppins,sans-serif;
+    font-style: italic;
+    color: var(--secondary-color-3);
+    text-align: center;
+}
+.Tv-series-list{
+    padding: 20px;
+}
+.Tv-series-list h2{
+    font-size: 35px;
+    font-family: Poppins,sans-serif;
+    font-style: italic;
+    color: var(--secondary-color-3);
+    text-align: center;
+}

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { BannerApiService } from '../../../services/banner/banner-api.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { BannerApiService } from '../../../../services/banner/banner-api.service';
 
 @Component({
   selector: 'app-now-playing',

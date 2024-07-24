@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { TopRatedService } from '../../../services/TopRated/top-rated.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { TopRatedService } from '../../../../services/TopRated/top-rated.service';
 
 @Component({
   selector: 'app-top-rated',

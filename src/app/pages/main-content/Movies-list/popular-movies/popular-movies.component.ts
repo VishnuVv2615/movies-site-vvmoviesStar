@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { PopularGenreService } from '../../../services/popular/popular-genre.service';
 import { HttpErrorResponse, HttpResponse } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { PopularService } from '../../../../services/Tv-Series/popular.service';
+import { PopularGenreService } from '../../../../services/popular/popular-genre.service';
 
 @Component({
   selector: 'app-popular-movies',
