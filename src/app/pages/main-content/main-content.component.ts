@@ -1,18 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BannerComponent } from './banner/banner.component';
 import { PopularMoviesComponent } from './popular-movies/popular-movies.component';
 import { TopRatedComponent } from './top-rated/top-rated.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-main-content',
   standalone: true,
   imports: [BannerComponent,
     PopularMoviesComponent,
-    TopRatedComponent
+    TopRatedComponent,
+    CommonModule
   ],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.css'
 })
-export class MainContentComponent {
+export class MainContentComponent implements OnInit {
+
+  loading:boolean=true;
+
+  ngOnInit(): void {
+    setTimeout(()=>{
+      this.loading=false;
+    },3000)
+  }
 
 }
