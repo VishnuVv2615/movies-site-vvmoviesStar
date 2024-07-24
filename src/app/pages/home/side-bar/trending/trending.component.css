@@ -1,0 +1,66 @@
+.trending{
+    width: 300px;
+}
+.container{
+    padding: 15px;
+}
+.heading h2{
+    font-size: 22px;
+    font-family: Poppins,sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    color: var(--secondary-color-2);
+}
+.list-trends{
+    padding: 10px;
+}
+.list-trends h3{
+font-size: 20px;
+font-family: Poppins,sans-serif;
+font-weight: 500;
+font-style: italic;
+color: var(--secondary-color-2);
+}
+.list-trends ul{
+    list-style: none;
+}
+.list-trends{
+    font-size: 15px;
+    font-family: poppins,sans-serif;
+    color: gray;
+    font-style: italic;
+}
+.list-trends ul li{
+    padding: 8px 12px;
+    border-bottom: 1px solid #eee;
+}
+.list-trends ul li:last-child{
+    border-bottom: none;
+}
+.list-trends ul li:hover{
+    background-color: var(--secondary-color-2);
+    color: black;
+}
+.list-trends i{
+    font-size: 20px;
+    margin-top: 10px;
+    color:gray;
+}
+.list-trends i:hover{
+    cursor: pointer;
+}
+.all-trends{
+    margin-bottom: 10px;
+}
+.Movie-trends{
+    margin-bottom: 10px;
+}
+.people-trends{
+    margin-bottom: 10px;
+}
+.tv-trends{
+    margin-bottom: 10px;
+}
+.list-item{
+    padding: 5px;
+}

@@ -14,7 +14,7 @@
 .genre i{
     font-size: 20px;
     margin-top: 10px;
-    color: white;
+    color: gray;
 }
 .genre i:hover{
     cursor: pointer;

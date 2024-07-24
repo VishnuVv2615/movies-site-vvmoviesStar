@@ -14,7 +14,7 @@
 .heading i{
     font-size: 20px;
     margin-top: 10px;
-    color: white;
+    color: gray;
 }
 .heading i:hover{
     cursor: pointer;

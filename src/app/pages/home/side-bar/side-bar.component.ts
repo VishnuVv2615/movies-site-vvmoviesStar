@@ -4,6 +4,7 @@ import { TvGenreComponent } from './tv-genre/tv-genre.component';
 import { CommonModule } from '@angular/common';
 import { PopularGenreComponent } from './popular-genre/popular-genre.component';
 import { TopRatedComponent } from './top-rated/top-rated.component';
+import { TrendingComponent } from './trending/trending.component';
 
 @Component({
   selector: 'app-side-bar',
@@ -12,7 +13,8 @@ import { TopRatedComponent } from './top-rated/top-rated.component';
     TvGenreComponent,
     CommonModule,
     PopularGenreComponent,
-    TopRatedComponent
+    TopRatedComponent,
+    TrendingComponent
   ],
   templateUrl: './side-bar.component.html',
   styleUrl: './side-bar.component.css'

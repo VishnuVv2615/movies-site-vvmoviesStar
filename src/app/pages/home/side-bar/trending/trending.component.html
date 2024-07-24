@@ -1,0 +1,63 @@
+<div class="trending">
+    <div class="container">
+        <div class="heading">
+            <h2>Trending</h2>
+        </div>
+        <div class="list-trends">
+            <div class="all-trends">
+                <div class="heading d-flex justify-content-between">
+                    <h3>All</h3>
+                    <i class="{{AlliconClass}}" (click)="toggleAllTrends()"></i>
+                </div>
+                <div class="list-item" *ngIf="showAllTrends">
+                    <ul>
+                        <li *ngFor="let allTrend of filteredAlltrends">
+                            {{allTrend.title}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="Movie-trends">
+                <div class="heading d-flex justify-content-between">
+                    <h3>Movies</h3>
+                    <i class="{{MovieiconClass}}" (click)="toggleMovieTrends()"></i>
+                </div>
+                <div class="list-item" *ngIf="showAllMovieTrends">
+                    <ul>
+                        <li *ngFor="let movieTrend of moviesTrends">
+                            {{movieTrend.title}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="people-trends">
+                <div class="heading d-flex justify-content-between">
+                    <h3>People</h3>
+                    <i class="{{PeopleiconClass}}" (click)="togglePeopleTrends()"></i>
+                </div>
+                <div class="list-item" *ngIf="showAllPeople">
+                    <ul>
+                        <ng-container *ngFor="let allTrend of allTrends">
+                            <li *ngIf="allTrend.title">
+                                {{allTrend.title}}
+                            </li>
+                        </ng-container>
+                    </ul>
+                </div>
+            </div>
+            <div class="tv-trends">
+                <div class="heading d-flex justify-content-between">
+                    <h3>Tv</h3>
+                    <i class="{{TviconClass}}" (click)="toggleTvTrends()"></i>
+                </div>
+                <div class="list-item" *ngIf="showAllTvTrends">
+                    <ul>
+                        <li *ngFor="let tvTrend of tvTrends">
+                            {{tvTrend.name}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

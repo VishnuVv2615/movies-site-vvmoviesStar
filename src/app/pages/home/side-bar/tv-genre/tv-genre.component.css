@@ -1,42 +1,51 @@
-.tv-genre{
+.tv-genre {
     width: 300px;
 }
-.container{
+
+.container {
     padding: 15px;
 }
-.Tvgenre h2{
+
+.Tvgenre h2 {
     font-size: 20px;
-    font-family: poppins,sans-serif;
+    font-family: poppins, sans-serif;
     font-weight: 600;
     font-style: italic;
     color: var(--secondary-color-2);
 }
-.tv-genre i{
+
+.tv-genre i {
     font-size: 20px;
     margin-top: 10px;
-    color: white;
+    color: gray;
 }
-.tv-genre i:hover{
+
+.tv-genre i:hover {
     cursor: pointer;
 }
-.list-tvGen{
+
+.list-tvGen {
     font-size: 15px;
-    font-family: poppins,sans-serif;
+    font-family: poppins, sans-serif;
     color: gray;
     font-style: italic;
 }
-.list-tvGen ul{
+
+.list-tvGen ul {
     list-style: none;
     padding: 0;
 }
-.list-tvGen ul li{
+
+.list-tvGen ul li {
     padding: 8px 12px;
     border-bottom: 1px solid #eee;
 }
-.list-tvGen ul li:last-child{
+
+.list-tvGen ul li:last-child {
     border-bottom: none;
 }
-.list-tvGen ul li:hover{
+
+.list-tvGen ul li:hover {
     background-color: var(--secondary-color-2);
     color: black;
 }
