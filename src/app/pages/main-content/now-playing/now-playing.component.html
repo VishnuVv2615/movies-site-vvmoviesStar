@@ -1,0 +1,20 @@
+<div class="now-playing">
+    <div class="container">
+        <div class="heading">
+            <h2>Now Playing Movies</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-lg-3" *ngFor="let movie of displayedMovies">
+                <div class="movie-item">
+                    <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="">
+                    <h3>{{movie.title}}</h3>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-3" *ngIf="showMoreBtn">
+            <button class="btn btn-primary" (click)="toggleMovies()">
+                {{showAllMovies ? 'Show Less' : 'Show More'}}
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+.now-playing {
+    padding: 20px;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.heading h2 {
+    font-size: 30px;
+    color: var(--secondary-color-3);
+    font-family: poppins, sans-serif;
+    font-style: italic;
+    font-weight: 600;
+    text-align: left;
+
+}
+
+.movie-item {
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.movie-item img {
+    border-radius: 8px;
+    width: 200px;
+}
+
+.movie-item h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-family: poppins, sans-serif;
+    color: gray;
+}
+
+.movie-item img:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition-duration: 75ms;
+}
