@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { TopRatedService } from '../../../../services/TopRated/top-rated.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-top-rated',
@@ -18,7 +19,7 @@ export class TopRatedComponent implements OnInit {
   showMore:boolean=true;
   showAllMovies:boolean=false;
 
-  constructor(private topRate:TopRatedService){}
+  constructor(private topRate:TopRatedService,private route:Router){}
 
   ngOnInit(): void {
     this.getTopRatedMovies();
@@ -46,5 +47,9 @@ export class TopRatedComponent implements OnInit {
     this.showAllMovies=!this.showAllMovies;
     this.updatedMovies();
     this.showMore=!this.showAllMovies ||(this.showAllMovies && this.topRatedMovies.length > this.moviesShow);
+  }
+  getToMovieDetails(movieId:string){
+    this.route.navigate(['/movie',movieId
+    ])
   }
 }

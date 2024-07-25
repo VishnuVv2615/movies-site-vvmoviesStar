@@ -5,7 +5,7 @@
         </div>
         <div class="row">
             <div class="col-md-4 col-lg-3" *ngFor="let movie of displayedItems">
-                <div class="movie-item">
+                <div class="movie-item" (click)="getToMovieDetails(movie.id)">
                     <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="">
                     <h3>{{movie.name}}</h3>
                 </div>

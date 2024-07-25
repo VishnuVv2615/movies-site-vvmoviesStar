@@ -1,0 +1,57 @@
+<div class="details-page" [ngStyle]="{'background-image':'url(' + backDropImage +')'}">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="load" *ngIf="loading">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+        </div>
+        <div class="main-details" *ngIf="!loading">
+            <div class="content d-flex gap-5" *ngIf="movieDetails">
+                <div class="poster">
+                    <img [src]="'https://image.tmdb.org/t/p/w500' + movieDetails.poster_path" alt="">
+                </div>
+                <div class="details">
+                    <div class="heading">
+                        <h2>{{movieDetails.original_title}} <span>({{releaseYear}})</span></h2>
+                        <div class="head-details d-flex">
+                            <button>PG</button>
+                            <p class="date">{{movieDetails.release_date}}(IN)</p> .
+                            <div class="genres" *ngFor="let genres of movieDetails.genres">
+                                <p>{{genres.name}},</p>
+                            </div> .
+                            <div class="duration">
+                                {{duration}}.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ratings">
+                        <p>Ratings: {{voteAvg}}(10)</p>
+                    </div>
+                    <div class="emoji">
+                        <div class="e-content">
+                            <i class="fa-solid fa-face-grin-hearts"></i>
+                            <i class="fa-solid fa-face-grin-tears"></i>
+                            <i class="fa-solid fa-face-grin-stars"></i>
+                            <i class="fa-solid fa-face-smile"></i>
+                        </div>
+                        <button>What's Your Vibe?</button>
+                    </div>
+                    <div class="buttons">
+                        <button><i class="fa-solid fa-list"></i></button>
+                        <button><i class="fa-solid fa-heart"></i></button>
+                        <button><i class="fa-solid fa-bookmark"></i></button>
+                        <button class="play-video"> <i class="fa-solid fa-play"></i>  Play Trailer</button>
+                    </div>
+                    <div class="tag">
+                        <p>{{movieDetails.tagline}}</p>
+                    </div>
+                    <div class="overview">
+                        <h2>OverView</h2>
+                        <p>{{movieDetails.overview}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

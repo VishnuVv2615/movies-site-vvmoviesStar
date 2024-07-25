@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AirTodayService } from '../../../../services/Tv-Series/air-today.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-air-ontoday',
@@ -18,7 +19,7 @@ export class AirOntodayComponent implements OnInit {
   showMorebtn: boolean = true;
   showAll: boolean = false;
 
-  constructor(private airOnSer: AirTodayService) { }
+  constructor(private airOnSer: AirTodayService,private route:Router) { }
 
   ngOnInit(): void {
     this.getAirTodaySeries();
@@ -27,7 +28,7 @@ export class AirOntodayComponent implements OnInit {
   getAirTodaySeries() {
     this.airOnSer.getAirTodaySeries().subscribe(
       (data) => {
-        this.airOnTdy = data;
+        this.airOnTdy=data;
         this.displayedItems = this.airOnTdy.slice(0, this.itemShow);
         this.showMorebtn = this.airOnTdy.length > this.itemShow;
       }
@@ -47,4 +48,8 @@ export class AirOntodayComponent implements OnInit {
     this.showMorebtn=!this.showAll ||(this.showAll && this.airOnTdy.length > this.itemShow)
   }
 
+  getToMovieDetails(movieId:string){
+    this.route.navigate(['/movie',movieId
+    ])
+  }
 }

@@ -3,6 +3,7 @@ import { HttpErrorResponse, HttpResponse } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { PopularService } from '../../../../services/Tv-Series/popular.service';
 import { PopularGenreService } from '../../../../services/popular/popular-genre.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-popular-movies',
@@ -19,7 +20,7 @@ export class PopularMoviesComponent implements OnInit {
   showMoreButton: boolean = true;
   showAll: boolean = false;
 
-  constructor(private popularMovie: PopularGenreService) { }
+  constructor(private popularMovie: PopularGenreService,private route:Router) { }
 
   ngOnInit(): void {
     this.getPopularMovies();
@@ -45,5 +46,9 @@ export class PopularMoviesComponent implements OnInit {
     this.showAll = !this.showAll;
     this.updatedMovies();
     this.showMoreButton = !this.showAll || (this.showAll && this.popularMovies.length > this.itemsToShow)
+  }
+  getToMovieDetails(movieId:string){
+    this.route.navigate(['/movie',movieId
+    ])
   }
 }

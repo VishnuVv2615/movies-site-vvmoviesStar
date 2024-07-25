@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { BannerApiService } from '../../../../services/banner/banner-api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-now-playing',
@@ -18,7 +19,7 @@ export class NowPlayingComponent implements OnInit {
   showMoreBtn:boolean=true;
   showAllMovies=false;
 
-  constructor(private apiSer:BannerApiService){}
+  constructor(private apiSer:BannerApiService ,private route:Router){}
 
   ngOnInit(): void {
     this.getNowPlayMovies();
@@ -45,5 +46,9 @@ export class NowPlayingComponent implements OnInit {
     this.showAllMovies=!this.showAllMovies;
     this.updatedMovies();
     this.showMoreBtn=!this.showAllMovies || (this.showAllMovies && this.nowPlayMovies.length > this.itemsToShow)
+  }
+  getToMovieDetails(movieId:string){
+    this.route.navigate(['/movie',movieId
+    ])
   }
 }
