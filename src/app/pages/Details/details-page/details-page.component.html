@@ -7,7 +7,7 @@
               </div>
         </div>
         <div class="main-details" *ngIf="!loading">
-            <div class="content d-flex gap-5" *ngIf="movieDetails">
+            <div class="content d-flex flex-column flex-lg-row flex-md-row gap-5" *ngIf="movieDetails">
                 <div class="poster">
                     <img [src]="'https://image.tmdb.org/t/p/w500' + movieDetails.poster_path" alt="">
                 </div>
@@ -55,3 +55,4 @@
         </div>
     </div>
 </div>
+<app-reviews></app-reviews>

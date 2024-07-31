@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { DetailsPageApiService } from '../../../services/details/details-page-api.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { ReviewsComponent } from '../reviews/reviews.component';
 
 @Component({
   selector: 'app-details-page',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,ReviewsComponent],
   templateUrl: './details-page.component.html',
   styleUrl: './details-page.component.css'
 })

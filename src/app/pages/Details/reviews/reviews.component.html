@@ -1,0 +1,25 @@
+<div class="reviews">
+    <div class="container">
+        <div class="header">
+            <h2>Social</h2>
+        </div>
+        <div class="reviews-content">
+           <h2>Reviews</h2>
+           <div class="main"  *ngIf="reviews">
+            <div *ngFor="let review of reviews.results">
+                <div class="name-avatar d-flex">
+                    <img [src]="getAvatarPath(review.author_details.avatar_path)" alt="{{review.author}}">
+                    <p>{{review.author}}</p>
+                </div>
+                <div class="main-content">
+                   <p>{{review.expanded ? review.content :(review.content | slice:0:200) +(review.content.length > 200 ? "...": '')}}
+                    <span *ngIf="review.content.length > 200" (click)="toggleContent(review)">
+                        {{review.expanded ? 'Read Less': 'Read More'}}
+                       </span>
+                   </p>   
+                </div>
+            </div>
+           </div>
+        </div>
+    </div>
+</div>
